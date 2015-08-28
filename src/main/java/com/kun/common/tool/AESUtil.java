@@ -15,7 +15,7 @@ public class AESUtil {
 	/**
 	 * Decode
 	 * @param content :  target  
-	 * @param passcode : the key which use to decode
+	 * @param passcode : encryption key
 	 * @return 
 	 */
 	public static String RevertAESCode(String content,String passcode){
