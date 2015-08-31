@@ -1,6 +1,7 @@
 package com.kun.common.tool;
 
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
@@ -25,7 +26,7 @@ public class CsvUtils {
     public static List<Map<String, Object>> getList(String fileName) {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
         try {
-            Reader reader = new StringReader(fileName);
+            Reader reader = new FileReader(fileName);
             CSVReader csvReader = new CSVReader(reader);
             List<String[]> rows = csvReader.readAll();
             Map<Integer, String> headsMap = new HashMap<Integer, String>();
